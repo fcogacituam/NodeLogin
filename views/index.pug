@@ -1,0 +1,9 @@
+//- index.pug
+extends layout
+
+block content
+	.container-fluid
+		h1 #{title}
+		if user
+			- var nombre= user.name
+			h3 Bienvenido, #{nombre}

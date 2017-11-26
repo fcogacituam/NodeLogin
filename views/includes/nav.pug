@@ -1,0 +1,18 @@
+nav(class="navbar navbar-default")
+					.container-fluid
+						.navbar-header
+							a(class="navbar-brand" href="") App
+						ul(class="nav navbar-nav")
+							li: a(href="") Noticias
+
+							if user
+								//- li: a(href="/") Dashboard
+								li: a(href="/users/logout") Logout
+								li: a(href="/admin") Admin
+							else
+								li: a(href="/users/login") Login
+								li: a(href="/users/register") Register
+						
+							
+							
+							

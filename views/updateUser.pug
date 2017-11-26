@@ -1,0 +1,20 @@
+extends layout
+block content
+	-var id= updatedUser.id
+	h1= id
+	form(method="post" action="/admin/users/updateuser/"+id)
+		- var name= updatedUser.name
+		- var username=updatedUser.username
+		- var email=updatedUser.email
+
+		.form-group
+			label Nombre:
+			input(type="text" value=name class="form-control" name="nombre")
+		.form-group
+			label Username:
+			input(type="text" value=username class="form-control" name="username")
+		.form-group
+			label email:
+			input(type="text" value=email class="form-control" name="email")
+		
+		button(type="submit" class="btn btn-normal") Modificar

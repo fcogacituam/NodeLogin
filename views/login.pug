@@ -1,0 +1,12 @@
+//- login.pug
+extends layout
+block content
+	h1 Login
+	form(method="POST" action="/users/login")
+		.form-group
+			label Username
+			input(type="text" class="form-control" name="username" placeholder="ingrese username")
+		.form-group
+			label
+			input(type="password" class="form-control" name="password" placeholder="ingrese password")
+		button(type="submit" class="btn btn-default") Submit

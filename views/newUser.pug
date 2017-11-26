@@ -1,0 +1,27 @@
+extends layout
+block content
+	h1 new User
+	if errors
+		each error in errors
+			div(class="alert alert-danger")= error.msg
+	
+
+
+
+	form(method="POST" action="/users/register")
+		.form.group
+			label Nombre
+			input(type="text" class="form-control" name="nombre" placeholder="ingrese nombre")
+		.form.group
+			label Username
+			input(type="text" class="form-control" name="username" placeholder="ingrese username")
+		.form.group
+			label Email
+			input(type="email" class="form-control" name="email" placeholder="ingrese mail")
+		.form-group
+			label Password
+			input(type="password" class="form-control" name="password" placeholder="ingrese password")
+		.form-group
+			label Confirm password
+			input(type="password" class="form-control" name="password2" placeholder="ingrese password")
+		button(type="submit" class="btn btn-default") Submit

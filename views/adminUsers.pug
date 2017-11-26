@@ -1,0 +1,21 @@
+extends layout
+block content
+	nav
+		ul
+			li: a(href="/admin/users/new") Crear Usuario
+	table(class="table table-striped table-bordered table-hover")
+		thead
+			tr
+				th Nombre
+				th Username
+				th email
+				th Manage
+		tbody
+			each user in users
+				tr
+					td= user.name 
+					td= user.username
+					td= user.email
+					td
+						a(href="/admin/users/update/"+user.id class="btn btn-success") Editar
+						a(href="/admin/users/delete/"+user.id class="btn btn-danger") Eliminar
